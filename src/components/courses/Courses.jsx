@@ -10,8 +10,20 @@ Courses.propTypes = {
     
 };
 
+
 function Courses() {
     const [courses,setCourses]=useState([])
+    const [selectedCourse,setSelectedCourse]=useState([])
+    
+    const handleAddToCart=(course)=>{
+       
+      
+            const newSelectedCourse =[...selectedCourse,course]
+            setSelectedCourse(newSelectedCourse)
+ 
+        }
+        
+        
     
     
     useEffect(()=>{
@@ -24,12 +36,16 @@ function Courses() {
         <div className='flex justify-between '>
             <div className=' grid grid-cols-3 gap-3 w-[70%]  ' >
                 {
-                    courses.map((course,idx)=><Course key={idx} course={course}></Course>)
+                    courses.map((course,idx)=><Course 
+                    key={idx} 
+                    course={course}
+                    handleAddToCart={handleAddToCart}
+                    ></Course>)
                 }
             </div>
             
                 
-                <Cart></Cart>
+                <Cart selectedCourse={selectedCourse} ></Cart>
               
             
         </div>

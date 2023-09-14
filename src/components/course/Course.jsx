@@ -2,11 +2,12 @@
 import PropTypes from 'prop-types';
 
 Course.propTypes = {
-    course: PropTypes.object.isRequired
+    course: PropTypes.object.isRequired,
+    handleAddToCart: PropTypes.func.isRequired
     
 };
 
-function Course({course}) {
+function Course({course,handleAddToCart}) {
     const{title,description,image,price,credit}=course
     return (
         <div  className='bg-[#FFF] rounded-xl text-start py-5 '>
@@ -22,7 +23,7 @@ function Course({course}) {
             </div>
             </div>
             <div className=' text-center '>
-                <button className='text-white font-semibold bg-[#2F80ED] w-[90%] rounded  mt-3 text-center' >Select</button>
+                <button onClick={()=>handleAddToCart(course)}  className='text-white font-semibold bg-[#2F80ED] w-[90%] rounded  mt-3 text-center' >Select</button>
             </div>
         </div>
     );

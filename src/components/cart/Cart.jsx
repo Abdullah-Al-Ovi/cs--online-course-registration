@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 
 
 Cart.propTypes = {
- 
+    selectedCourse: PropTypes.array.isRequired
+
 };
 
-function Cart() {
+function Cart({selectedCourse}) {
    
 
     return (
@@ -18,7 +19,11 @@ function Cart() {
             <div className='border-b-2 my-3'></div> 
             <h2 className=' text-lg font-bold mb-3'>Course Name</h2>
             <div className='mb-7'>
-              
+            <ol>
+                    {
+                        selectedCourse.map((course,idx)=><li className='text-gray-500 text-sm' key={idx}>{idx+1}. {course.title}</li>)
+                    }
+                    </ol>
                     
             </div> 
             <div className='border-b-2 my-3'></div>
