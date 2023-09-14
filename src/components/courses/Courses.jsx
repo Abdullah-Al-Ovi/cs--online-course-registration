@@ -13,6 +13,7 @@ Courses.propTypes = {
 function Courses() {
     const [courses,setCourses]=useState([])
     
+    
     useEffect(()=>{
         fetch('data.json')
         .then(res => res.json())
