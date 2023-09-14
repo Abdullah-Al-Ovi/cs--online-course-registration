@@ -1,0 +1,75 @@
+[
+    {
+      "id": "CSE101",
+      "title": "Introduction to C Programming",
+      "description": "Learn C programming fundamentals and problem-solving techniques in this introductory course.",
+      "image": "https://i.ibb.co/FWLv6Vt/Rectangle-2-2.png",
+      "price": 1500,
+      "credit": 3
+    },
+    {
+      "id": "CSE202",
+      "title": "Data Structures",
+      "description": "Explore data structures with an emphasis on problem-solving and efficiency.",
+      "image": "https://i.ibb.co/mcpWnGC/Rectangle-3.png",
+      "price": 2500,
+      "credit": 4
+    },
+    {
+      "id": "CSE303",
+      "title": "Database Management Systems(MySQL)",
+      "description": "Master database management and optimization techniques in this advanced course.",
+      "image": "https://i.ibb.co/MSYYnjd/Rectangle-2-1.png",
+      "price": 2000,
+      "credit": 3
+    },
+    {
+      "id": "CSE404",
+      "title": "Machine Learning Fundamentals",
+      "description": "Dive into machine learning basics, covering patterns and predictive modeling.",
+      "image": "https://i.ibb.co/283Vc64/Rectangle-2-6.png",
+      "price": 4500,
+      "credit": 4
+    },
+    {
+      "id": "CSE505",
+      "title": "Web Development with React",
+      "description": "Build interactive web applications using React.js for a dynamic user experience.",
+      "image": "https://i.ibb.co/4tr3YBd/Rectangle-3-1.png",
+      "price": 3500,
+      "credit": 3
+    },
+    {
+      "id": "CSE606",
+      "title": "Learn Python with OOP",
+      "description": "Learn python programming fundamentals and implementation of OOP with Python",
+      "image": "https://i.ibb.co/sJ0GvH2/Rectangle-2.png",
+      "price": 4500,
+      "credit": 3
+    },
+    {
+      "id": "CSE707",
+      "title": "Introduction to C++",
+      "description": "Learn C++ programming fundamentals and problem-solving techniques in this introductory course.",
+      "image": "https://i.ibb.co/rZ2ddGY/Rectangle-2-4.png",
+      "price": 2000,
+      "credit": 3
+    },
+    {
+      "id": "CSE808",
+      "title": "Learn Algorithms",
+      "description": "Explore algorithms with an emphasis on problem-solving and efficiency.",
+      "image": "https://i.ibb.co/bJXk0kB/Rectangle-2-3.png",
+      "price": 2500,
+      "credit": 3
+    },
+    {
+      "id": "CSE909",
+      "title": "Software Project Management",
+      "description": "Master project management techniques for software development projects and teams.",
+      "image": "https://i.ibb.co/QvJfGF3/Rectangle-2-5.png",
+      "price": 3000,
+      "credit": 3
+    }
+  ]
+  
