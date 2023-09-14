@@ -21,7 +21,7 @@ function Courses() {
    
     return (
         <div className='flex justify-between '>
-            <div  >
+            <div className=' grid grid-cols-3 gap-3 w-[70%]  ' >
                 {
                     courses.map((course,idx)=><Course key={idx} course={course}></Course>)
                 }
