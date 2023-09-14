@@ -1,5 +1,7 @@
 
 import './App.css'
+import Courses from './components/courses/Courses'
+
 import Header from './components/header/Header'
 
 function App() {
@@ -8,6 +10,7 @@ function App() {
   return (
     <>
      <Header></Header>
+    <Courses></Courses>
      
       
     </>
