@@ -19,7 +19,7 @@ function Course({course,handleAddToCart}) {
             <p  className='text-xs text-stone-500 mb-3'>{description}</p>
             <div className='flex justify-between' >
                 <p><span className='mr-2'><i className="fa-solid fa-dollar-sign "></i></span>Price : {price}</p>
-                <p><span><i className="fa-solid fa-book-open mr-2"></i></span>Credit : {credit}hr</p>
+                <p><span><i className="fa-solid fa-book-open mr-2 "></i></span>Credit : {credit}hr</p>
             </div>
             </div>
             <div className=' text-center '>

@@ -1,31 +1,50 @@
 
-import PropTypes from 'prop-types';
 import Course from '../course/Course';
 import Cart from '../cart/Cart';
 import { useEffect } from 'react';
 import { useState } from 'react';
-
-
-Courses.propTypes = {
-    
-};
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Courses() {
     const [courses,setCourses]=useState([])
     const [selectedCourse,setSelectedCourse]=useState([])
+    const [totalCredits,settotalCredits]=useState(0)
+    const [remaining,setRemaining]=useState(20)
+    const [price,setPrice]=useState(0)
+
     
     const handleAddToCart=(course)=>{
-       
-      
-            const newSelectedCourse =[...selectedCourse,course]
-            setSelectedCourse(newSelectedCourse)
- 
+        let creditSum =course.credit;
+        selectedCourse.forEach(item=>creditSum=creditSum+item.credit)
+
+        const isPresesnt = selectedCourse.find(item=>item.id===course.id)
+
+        if(isPresesnt){
+            toast('You can not enroll a couse more than once.')
         }
+        else{
+            if(creditSum<=20){
+               const newSelectedCourse =[...selectedCourse,course]
+               setSelectedCourse(newSelectedCourse)
+               settotalCredits(creditSum);
+              const remainingCredit = 20-creditSum;
+               setRemaining(remainingCredit);
+               const totalPrice = price+course.price
+               setPrice(totalPrice)
+            } 
+            else{
+               toast('Your course credits can not exceed 20 hours.')
+            }  
+           
+           }
+ 
+
+
+    }
         
-        
-    
-    
+  
     useEffect(()=>{
         fetch('data.json')
         .then(res => res.json())
@@ -45,9 +64,14 @@ function Courses() {
             </div>
             
                 
-                <Cart selectedCourse={selectedCourse} ></Cart>
+                <Cart 
+                    selectedCourse={selectedCourse}
+                    totalCredits={totalCredits} 
+                    remaining={remaining} 
+                    price={price} >
+                </Cart>
               
-            
+                <ToastContainer/>
         </div>
     );
 }
